@@ -1,0 +1,19 @@
+language: java
+jdk:
+  - oraclejdk8
+build:
+  ci:
+    - mvn clean install
+    - cp -r target shippable/codecoverage
+integrations:
+  notifications:
+    - integrationName: slack-notification
+      type: slack
+      recipients:
+        - "#guoliang_code"
+    - integrationName: email
+      type: email
+      recipients:
+        - gary+shippable@liguoliang.com
+      sendConsoleLogs: true
+      sendCoverageReports: true
