@@ -10,7 +10,7 @@ integrations:
     - integrationName: slack-notification
       type: slack
       recipients:
-        - "#guoliang_code"
+        - "#your-slack-channel"
     - integrationName: email
       type: email
       recipients:

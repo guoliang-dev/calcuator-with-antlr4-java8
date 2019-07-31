@@ -1,0 +1,11 @@
+# Check our guides at https://confluence.atlassian.com/x/zd-5Mw for more examples.
+
+image: maven:3.3.9
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - maven
+        script: # Modify the commands below to build your repository.
+          - mvn -B clean install # -B batch mode makes Maven less verbose
